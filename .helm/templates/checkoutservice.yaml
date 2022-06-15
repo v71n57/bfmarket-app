@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: checkoutservice
-        image: adenoudsten96/checkoutservice
+        image: {{ .Values.werf.image.checkoutservice }}
         ports:
         - containerPort: 8080
         env:

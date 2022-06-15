@@ -43,7 +43,7 @@ spec:
     spec:
       containers:
       - name: cartservice
-        image: adenoudsten96/cartservice
+        image: {{ .Values.werf.image.cartservice }}
         ports:
         - containerPort: 8081
         env:

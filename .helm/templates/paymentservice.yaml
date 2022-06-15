@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: paymentservice
-        image: adenoudsten96/paymentservice
+        image: {{ .Values.werf.image.paymentservice }}
         ports:
         - containerPort: 8000
         env:

@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: frontendservice
-        image: adenoudsten96/frontendservice
+        image: {{ .Values.werf.image.frontendservice }}
         ports:
         - containerPort: 80
         env:

@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: productservice
-        image: adenoudsten96/productservice
+        image: {{ .Values.werf.image.productservice }}
         ports:
         - containerPort: 8082
         env:

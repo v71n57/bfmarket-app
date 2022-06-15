@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: shippingservice
-        image: adenoudsten96/shippingservice
+        image: {{ .Values.werf.image.shippingservice }}
         ports:
         - containerPort: 8001
         env:

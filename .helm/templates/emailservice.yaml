@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: emailservice
-        image: adenoudsten96/emailservice
+        image: {{ .Values.werf.image.emailservice }}
         ports:
         - containerPort: 8002
         env:
