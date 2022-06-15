@@ -55,7 +55,7 @@ func homePage(w http.ResponseWriter, r *http.Request) {
 	// Set the sessionID in a cookie if there isn't already one set
 	_, err := r.Cookie("sessionid")
 	if err != nil {
-		uuid, err := uuid.NewV4()
+		uuid, err := uuid.New()
 		if err != nil {
 			log.Error(err)
 		}
