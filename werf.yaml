@@ -12,10 +12,10 @@ context: checkoutservice
 image: emailservice
 dockerfile: Dockerfile
 context: emailservice
-# ---
-# image: frontendservice
-# dockerfile: Dockerfile
-# context: frontendservice
+---
+image: frontendservice
+dockerfile: Dockerfile
+context: frontendservice
 ---
 image: paymentservice
 dockerfile: Dockerfile
