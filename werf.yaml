@@ -1,21 +1,21 @@
 configVersion: 1
 project: bfmarket-app
----
-image: cartservice
-dockerfile: Dockerfile
-context: cartservice
----
-image: checkoutservice
-dockerfile: Dockerfile
-context: checkoutservice
+# ---
+# image: cartservice
+# dockerfile: Dockerfile
+# context: cartservice
+# ---
+# image: checkoutservice
+# dockerfile: Dockerfile
+# context: checkoutservice
 # ---
 # image: emailservice
 # dockerfile: Dockerfile
 # context: emailservice
----
-image: frontendservice
-dockerfile: Dockerfile
-context: frontendservice
+# ---
+# image: frontendservice
+# dockerfile: Dockerfile
+# context: frontendservice
 # ---
 # image: paymentservice
 # dockerfile: Dockerfile
