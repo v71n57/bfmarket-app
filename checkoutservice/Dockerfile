@@ -1,13 +1,15 @@
 #build stage
-FROM golang:alpine AS builder
+ARG GO_VERSION=1.18
+ARG ALP_VERSION=3.16
+
+FROM golang:${GO_VERSION}-alpine${ALP_VERSION} AS builder
 WORKDIR /go/src/app
 COPY . .
 RUN apk add --no-cache git
-RUN go get -d -v ./...
-RUN go install -v ./...
+RUN go build -o /go/bin/app ./main.go
 
 #final stage
-FROM alpine:latest
+FROM alpine:${ALP_VERSION}
 RUN apk --no-cache add ca-certificates
 COPY --from=builder /go/bin/app /app
 ENTRYPOINT ./app
