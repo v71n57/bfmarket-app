@@ -20,7 +20,7 @@ context: frontendservice
 # image: paymentservice
 # dockerfile: Dockerfile
 # context: paymentservice
-# ---
+---
 image: productservice
 dockerfile: Dockerfile
 context: productservice
