@@ -16,15 +16,15 @@ context: emailservice
 # image: frontendservice
 # dockerfile: Dockerfile
 # context: frontendservice
-# ---
-# image: paymentservice
-# dockerfile: Dockerfile
-# context: paymentservice
+---
+image: paymentservice
+dockerfile: Dockerfile
+context: paymentservice
 ---
 image: productservice
 dockerfile: Dockerfile
 context: productservice
-# ---
-# image: shippingservice
-# dockerfile: Dockerfile
-# context: shippingservice
+---
+image: shippingservice
+dockerfile: Dockerfile
+context: shippingservice
