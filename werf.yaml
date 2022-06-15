@@ -1,0 +1,30 @@
+configVersion: 1
+project: shop-app
+---
+image: cartservice
+dockerfile: Dockerfile
+context: cartservice
+---
+image: checkoutservice
+dockerfile: Dockerfile
+context: checkoutservice
+---
+image: emailservice
+dockerfile: Dockerfile
+context: emailservice
+---
+image: frontendservice
+dockerfile: Dockerfile
+context: frontendservice
+---
+image: paymentservice
+dockerfile: Dockerfile
+context: paymentservice
+---
+image: productservice
+dockerfile: Dockerfile
+context: productservice
+---
+image: shippingservice
+dockerfile: Dockerfile
+context: shippingservice
