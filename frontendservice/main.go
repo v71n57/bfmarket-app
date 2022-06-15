@@ -13,7 +13,7 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	uuid "github.com/google/uuid"
+	"github.com/google/uuid"
 	// uuid "github.com/satori/go.uuid"
 	log "github.com/sirupsen/logrus"
 )
@@ -55,10 +55,11 @@ func homePage(w http.ResponseWriter, r *http.Request) {
 	// Set the sessionID in a cookie if there isn't already one set
 	_, err := r.Cookie("sessionid")
 	if err != nil {
-		uuid, err := uuid.New()
-		if err != nil {
-			log.Error(err)
-		}
+		uuid := uuid.New()
+		// uuid, err := uuid.New()
+		// if err != nil {
+		// 	log.Error(err)
+		// }
 		cookie := http.Cookie{Name: "sessionid", Value: uuid.String(), Expires: time.Now().Add(1 * time.Hour)}
 		http.SetCookie(w, &cookie)
 	}
