@@ -8,10 +8,10 @@ context: cartservice
 image: checkoutservice
 dockerfile: Dockerfile
 context: checkoutservice
-# ---
-# image: emailservice
-# dockerfile: Dockerfile
-# context: emailservice
+---
+image: emailservice
+dockerfile: Dockerfile
+context: emailservice
 # ---
 # image: frontendservice
 # dockerfile: Dockerfile
