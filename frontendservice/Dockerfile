@@ -1,7 +1,3 @@
-
-COPY --from=builder /go/bin/app /app
-ENTRYPOINT ./app
-
 #build stage
 ARG GO_VERSION=1.18
 ARG ALP_VERSION=3.16
