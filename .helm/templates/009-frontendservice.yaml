@@ -32,7 +32,7 @@ spec:
         - containerPort: 80
         env:
           - name: CARTSERVICE
-            value: "http://cartservice:8081"
+            value: "http://cartservice:80"
           - name: PRODUCTSERVICE
             value: "http://productservice:80"
           - name: CHECKOUTSERVICE
