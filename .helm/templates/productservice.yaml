@@ -38,7 +38,7 @@ spec:
             value: "productservice-db"
           - name: DB_PASS
             value: "Password"
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         
 ---
 apiVersion: v1
