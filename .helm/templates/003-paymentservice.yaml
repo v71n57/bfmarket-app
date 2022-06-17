@@ -7,8 +7,8 @@ spec:
     app: paymentservice
   ports:
     - protocol: TCP
-      port: 8000
-      targetPort: 8000
+      port: 80
+      targetPort: 80
       nodePort: 30006
   type: NodePort
 ---
@@ -32,9 +32,9 @@ spec:
       - name: paymentservice
         image: {{ .Values.werf.image.paymentservice }}
         ports:
-        - containerPort: 8000
+        - containerPort: 80
         env:
         - name: PORT
-          value: "8000"
+          value: "80"
         imagePullPolicy: Always
         

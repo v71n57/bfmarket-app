@@ -7,8 +7,8 @@ spec:
     app: shippingservice
   ports:
     - protocol: TCP
-      port: 8001
-      targetPort: 8001
+      port: 80
+      targetPort: 80
       nodePort: 30005
   type: NodePort
 ---
@@ -32,9 +32,9 @@ spec:
       - name: shippingservice
         image: {{ .Values.werf.image.shippingservice }}
         ports:
-        - containerPort: 8001
+        - containerPort: 80
         env:
         - name: PORT
-          value: "8001"
+          value: "80"
         imagePullPolicy: Always
         

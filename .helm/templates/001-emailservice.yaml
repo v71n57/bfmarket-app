@@ -7,8 +7,8 @@ spec:
     app: emailservice
   ports:
     - protocol: TCP
-      port: 8002
-      targetPort: 8002
+      port: 80
+      targetPort: 80
       nodePort: 30004
   type: NodePort
 ---
@@ -32,9 +32,9 @@ spec:
       - name: emailservice
         image: {{ .Values.werf.image.emailservice }}
         ports:
-        - containerPort: 8002
+        - containerPort: 80
         env:
         - name: PORT
-          value: "8002"
+          value: "80"
         imagePullPolicy: Always
         

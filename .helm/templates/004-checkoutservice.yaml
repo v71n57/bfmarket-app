@@ -37,11 +37,11 @@ spec:
           - name: CARTSERVICE
             value: "http://cartservice:80"
           - name: EMAILSERVICE
-            value: "http://emailservice:8002"
+            value: "http://emailservice:80"
           - name: PAYMENTSERVICE
-            value: "http://paymentservice:8000"
+            value: "http://paymentservice:80"
           - name: SHIPPINGSERVICE
-            value: "http://shippingservice:8001"
+            value: "http://shippingservice:80"
           - name: PRODUCTSERVICE
             value: "http://productservice:80"
         imagePullPolicy: Always
