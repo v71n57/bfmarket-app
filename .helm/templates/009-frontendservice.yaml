@@ -34,7 +34,7 @@ spec:
           - name: CARTSERVICE
             value: "http://cartservice:8081"
           - name: PRODUCTSERVICE
-            value: "http://productservice:8082"
+            value: "http://productservice:80"
           - name: CHECKOUTSERVICE
             value: "http://checkoutservice:8080"
         imagePullPolicy: Always
