@@ -11,7 +11,8 @@ spec:
 {{ if eq .Values.werf.env "prod" }}
   - host: example.com
 {{ else }}
-  - host: {{ .Values.werf.env }}.example.com
+  #- host: {{ .Values.werf.env }}.example.com
+  - host: master1
 {{ end }}
     http:
       paths:
