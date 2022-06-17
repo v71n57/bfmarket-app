@@ -8,9 +8,11 @@ spec:
   ports:
     - protocol: TCP
       port: 80
+{{ if eq .Values.werf.env "dev" }}      
       targetPort: 80
       nodePort: 30005
   type: NodePort
+{{ end }}  
 ---
 apiVersion: apps/v1
 kind: Deployment

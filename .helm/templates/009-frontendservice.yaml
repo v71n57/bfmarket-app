@@ -8,7 +8,7 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-{{ if eq .Values.werf.env "prod" }}
+{{ if eq .Values.werf.env "dev" }}
       targetPort: 80
       nodePort: 30003
   type: NodePort
