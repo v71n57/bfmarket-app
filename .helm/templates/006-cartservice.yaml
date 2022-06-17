@@ -12,19 +12,6 @@ spec:
       nodePort: 30000
   type: NodePort
 ---
-apiVersion: v1
-kind: Service
-metadata:
-  name: cartservice-redis
-spec:
-  selector:
-    app: cartservice-redis
-  ports:
-    - protocol: TCP
-      port: 6379
-      targetPort: 6379
-  type: ClusterIP
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -56,29 +43,3 @@ spec:
         #     port: 8081
         #     initialDelaySeconds: 10
         #     periodSeconds: 10
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: cartservice-redis
-  labels:
-    app: cartservice-redis
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: cartservice-redis
-  template:
-    metadata:
-      labels:
-        app: cartservice-redis
-    spec:
-      containers:
-      - name: redis
-        image: redis
-        ports:
-        - containerPort: 6379
-        imagePullPolicy: IfNotPresent
-        resources:
-          limits:
-            cpu: "100m"

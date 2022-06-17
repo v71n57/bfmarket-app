@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: productservice-db
+spec:
+  selector:
+    app: productservice-db
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productservice-db
+  labels:
+    app: productservice-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: productservice-db
+  template:
+    metadata:
+      labels:
+        app: productservice-db
+    spec:
+      containers:
+      - name: postgres
+        image: postgres
+        ports:
+        - containerPort: 5432
+        env:
+          - name: POSTGRES_DB
+            value: "products"
+          - name: POSTGRES_HOST_AUTH_METHOD
+            value: "trust"
+        imagePullPolicy: Always
