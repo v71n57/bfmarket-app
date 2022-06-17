@@ -6,11 +6,8 @@ spec:
   selector:
     app: frontendservice
   ports:
-    - protocol: TCP
+    - name: frontendservice
       port: 80
-      targetPort: 80
-      nodePort: 30003
-  type: NodePort
 ---
 apiVersion: apps/v1
 kind: Deployment
