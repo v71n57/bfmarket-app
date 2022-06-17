@@ -10,7 +10,7 @@ spec:
       port: 80
 {{ if eq .Values.werf.env "dev" }}
       targetPort: 80
-      nodePort: 30003
+      nodePort: 30011
   type: NodePort
 {{ end }}
 ---
