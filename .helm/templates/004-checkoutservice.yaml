@@ -7,8 +7,8 @@ spec:
     app: checkoutservice
   ports:
     - protocol: TCP
-      port: 8080
-      targetPort: 8080
+      port: 80
+      targetPort: 80
       nodePort: 30001
   type: NodePort
 ---
@@ -32,10 +32,10 @@ spec:
       - name: checkoutservice
         image: {{ .Values.werf.image.checkoutservice }}
         ports:
-        - containerPort: 8080
+        - containerPort: 80
         env:
           - name: CARTSERVICE
-            value: "http://cartservice:8081"
+            value: "http://cartservice:80"
           - name: EMAILSERVICE
             value: "http://emailservice:8002"
           - name: PAYMENTSERVICE
@@ -43,6 +43,6 @@ spec:
           - name: SHIPPINGSERVICE
             value: "http://shippingservice:8001"
           - name: PRODUCTSERVICE
-            value: "http://productservice:8082"
+            value: "http://productservice:80"
         imagePullPolicy: Always
         
