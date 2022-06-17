@@ -7,8 +7,8 @@ spec:
     app: productservice
   ports:
     - protocol: TCP
-      port: 8082
-      targetPort: 8082
+      port: 80
+      targetPort: 80
       nodePort: 30002
   type: NodePort
 ---
@@ -32,7 +32,7 @@ spec:
       - name: productservice
         image: {{ .Values.werf.image.productservice }}
         ports:
-        - containerPort: 8082
+        - containerPort: 80
         env:
           - name: DB_HOST
             value: "productservice-db"

@@ -14,4 +14,4 @@ RUN apk --no-cache add ca-certificates
 COPY --from=builder /go/bin/app /app
 ENTRYPOINT ./app
 LABEL Name=ProductService Version=0.0.1
-EXPOSE 8082
+EXPOSE 80

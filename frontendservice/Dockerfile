@@ -19,4 +19,4 @@ COPY --from=builder /go/src/app/templates templates/
 COPY --from=builder /go/src/app/static static/
 ENTRYPOINT ./app
 LABEL Name=FrontendService Version=0.0.1
-EXPOSE 8082
+EXPOSE 80

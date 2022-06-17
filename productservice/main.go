@@ -159,7 +159,7 @@ func main() {
 	gin.SetMode(gin.ReleaseMode)
 	r := setupRouter()
 	log.Println("Service productservice started. Now accepting connections...")
-	r.Run(":8082")
+	r.Run(":80")
 }
 
 func mustMapEnv(envKey string) string {
