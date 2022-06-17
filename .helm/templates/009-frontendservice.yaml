@@ -36,6 +36,6 @@ spec:
           - name: PRODUCTSERVICE
             value: "http://productservice:80"
           - name: CHECKOUTSERVICE
-            value: "http://checkoutservice:8080"
+            value: "http://checkoutservice:80"
         imagePullPolicy: Always
         

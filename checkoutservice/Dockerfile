@@ -14,4 +14,4 @@ RUN apk --no-cache add ca-certificates
 COPY --from=builder /go/bin/app /app
 ENTRYPOINT ./app
 LABEL Name=CheckoutService Version=0.0.1
-EXPOSE 8080
+EXPOSE 80
