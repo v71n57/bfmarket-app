@@ -214,7 +214,7 @@ func main() {
 	gin.DisableConsoleColor()
 	r := setupRouter()
 	log.Info("Service cartservice started. Now accepting connections...")
-	r.Run(":8081")
+	r.Run(":80")
 }
 
 func mustMapEnv(envKey string) string {
