@@ -1,4 +1,4 @@
 @Library('bfmarket-lib') _
 multiStage ([
-namespace: 'dev'
+namespace: 'prod'
 ])
